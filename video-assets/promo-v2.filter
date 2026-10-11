@@ -1,0 +1,42 @@
+[0:v]fps=30,scale=1040:585,setsar=1,format=yuv420p,trim=duration=3,setpts=PTS-STARTPTS[s0];
+[1:v]fps=30,scale=1040:585,setsar=1,format=yuv420p,trim=duration=2.6,setpts=PTS-STARTPTS[s1];
+[2:v]fps=30,scale=1040:585,setsar=1,format=yuv420p,trim=duration=2.8,setpts=PTS-STARTPTS[s2];
+[3:v]fps=30,scale=1040:585,setsar=1,format=yuv420p,trim=duration=2.8,setpts=PTS-STARTPTS[s3];
+[s0][s1]xfade=transition=fade:duration=0.3:offset=2.7[x1];
+[x1][s2]xfade=transition=fade:duration=0.3:offset=5.0[x2];
+[x2][s3]xfade=transition=fade:duration=0.3:offset=7.5[screen];
+[4:v]format=yuv420p,
+drawbox=x=0:y=0:w=760:h=1080:color=0x0c613e:t=fill,
+drawbox=x=760:y=0:w=1160:h=1080:color=0xf1f8f4:t=fill,
+drawbox=x=70:y=70:w=42:h=42:color=0xdff4e8:t=fill,
+drawbox=x=82:y=82:w=18:h=14:color=white:t=fill,
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='YKPS FORUM':fontcolor=white:fontsize=23:x=130:y=79,
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='YOUR VOICE.':fontcolor=white:fontsize=72:x=70:y=330:enable='between(t,0.15,2.55)':alpha='if(lt(t,0.55),(t-0.15)/0.4,if(gt(t,2.25),(2.55-t)/0.3,1))',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='CAN MOVE':fontcolor=0x9de1bb:fontsize=72:x=70:y=418:enable='between(t,0.28,2.55)':alpha='if(lt(t,0.68),(t-0.28)/0.4,if(gt(t,2.25),(2.55-t)/0.3,1))',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='THE SCHOOL.':fontcolor=white:fontsize=72:x=70:y=506:enable='between(t,0.41,2.55)':alpha='if(lt(t,0.81),(t-0.41)/0.4,if(gt(t,2.25),(2.55-t)/0.3,1))',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='Share what should change.':fontcolor=0xc8ead7:fontsize=25:x=72:y=630:enable='between(t,0.65,2.45)':alpha='if(lt(t,1.0),(t-0.65)/0.35,1)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='POST.':fontcolor=white:fontsize=104:x=70:y=322:enable='between(t,2.65,5.05)':alpha='if(lt(t,2.95),(t-2.65)/0.3,if(gt(t,4.75),(5.05-t)/0.3,1))',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='VOTE.':fontcolor=0x9de1bb:fontsize=104:x=70:y=442:enable='between(t,2.78,5.05)':alpha='if(lt(t,3.08),(t-2.78)/0.3,if(gt(t,4.75),(5.05-t)/0.3,1))',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='TOP 3  →  STUCO':fontcolor=0xc8ead7:fontsize=27:x=72:y=625:enable='between(t,3.1,4.9)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='SEE THE':fontcolor=white:fontsize=86:x=70:y=350:enable='between(t,5.15,7.55)':alpha='if(lt(t,5.45),(t-5.15)/0.3,if(gt(t,7.25),(7.55-t)/0.3,1))',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='RESULT.':fontcolor=0x9de1bb:fontsize=104:x=70:y=452:enable='between(t,5.28,7.55)':alpha='if(lt(t,5.58),(t-5.28)/0.3,if(gt(t,7.25),(7.55-t)/0.3,1))',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='Every update stays visible.':fontcolor=0xc8ead7:fontsize=25:x=72:y=625:enable='between(t,5.65,7.45)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='MAKE SCHOOL':fontcolor=white:fontsize=66:x=70:y=370:enable='between(t,7.65,10)':alpha='if(lt(t,8.05),(t-7.65)/0.4,1)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='BETTER.':fontcolor=0x9de1bb:fontsize=112:x=70:y=455:enable='between(t,7.8,10)':alpha='if(lt(t,8.2),(t-7.8)/0.4,1)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='Ideas. Votes. Results.':fontcolor=0xc8ead7:fontsize=25:x=72:y=630:enable='between(t,8.15,10)',
+drawbox=x=805:y=202:w=1064:h=609:color=0x153629@0.10:t=fill,
+drawbox=x=793:y=190:w=1064:h=609:color=white:t=fill,
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='LIVE DEMO':fontcolor=0x158457:fontsize=17:x=805:y=125,
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='YKPS Forum':fontcolor=0x6c7f75:fontsize=17:x=1700:y=125
+[base];
+[base][screen]overlay=x=805:y=202:shortest=1,
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='DISCOVER':fontcolor=0x17372a:fontsize=45:x=805:y=855:enable='between(t,0,2.7)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='01 / 04':fontcolor=0x6c7f75:fontsize=17:x=1778:y=874:enable='between(t,0,2.7)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='VOTE':fontcolor=0x17372a:fontsize=45:x=805:y=855:enable='between(t,2.7,5.0)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='02 / 04':fontcolor=0x6c7f75:fontsize=17:x=1778:y=874:enable='between(t,2.7,5.0)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='POST':fontcolor=0x17372a:fontsize=45:x=805:y=855:enable='between(t,5.0,7.5)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='03 / 04':fontcolor=0x6c7f75:fontsize=17:x=1778:y=874:enable='between(t,5.0,7.5)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial\ Bold.ttf':text='TRACK THE OUTCOME':fontcolor=0x17372a:fontsize=45:x=805:y=855:enable='between(t,7.5,10)',
+drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial.ttf':text='04 / 04':fontcolor=0x6c7f75:fontsize=17:x=1778:y=874:enable='between(t,7.5,10)',
+fade=t=out:st=9.75:d=0.25
+[vout];

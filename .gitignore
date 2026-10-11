@@ -40,3 +40,6 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+
+# local exports and handoff packages
+*.zip

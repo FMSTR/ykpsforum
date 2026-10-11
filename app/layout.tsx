@@ -7,8 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const socialImage = `${protocol}://${host}/og.png`;
-  const title = "YKPS Forum | Ideas into action";
-  const description = "A school community platform for sharing constructive suggestions, building support, and following visible outcomes.";
+  const title = "YKPS Forum | Campus community";
+  const description = "A private school community platform for constructive ideas, organization videos, club collaboration, and visible outcomes.";
 
   return {
     title,

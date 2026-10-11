@@ -1,0 +1,5 @@
+# The repository owner must review every change before it reaches main.
+* @FMSTR
+
+# Protect the ownership and collaboration configuration itself.
+/.github/ @FMSTR
